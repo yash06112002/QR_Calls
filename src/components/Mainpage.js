@@ -1,12 +1,10 @@
 import React from 'react';
 import { auth } from '../firebase.js';
 import QRCode from 'react-qr-code';
-import { useWebRTC } from '../hooks/useWebRTC.js';
 import Scanner from './Scanner.js';
 
 const Mainpage = () => {
 
-    const { clients } = useWebRTC();
     const logout = () => {
         auth.signOut();
     }
